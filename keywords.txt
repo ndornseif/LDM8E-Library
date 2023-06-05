@@ -1,0 +1,25 @@
+#######################################
+# Syntax Coloring Map For LDM8EDriver
+####################################### 
+# Class
+#######################################
+
+LDM8EDisplay	KEYWORD1
+LDM8EDriver		KEYWORD1
+
+#######################################
+# Methods and Functions 
+#######################################	
+
+latchData		KEYWORD2
+sendByte		KEYWORD2
+setDisplay		KEYWORD2
+writeDisplay	KEYWORD2
+setBrightness	KEYWORD2
+clearDisplay	KEYWORD2
+
+#######################################
+# Constants
+#######################################
+
+LDM8E_DIGIT_BYTES	LITERAL1
