@@ -1,5 +1,7 @@
 # LDM8E-Library
-!!UNFINISHED ALPHA VERSION!!  
+[codesize]: https://img.shields.io/github/languages/code-size/ndornseif/LDM8E-Library
+
+**!!UNFINISHED ALPHA VERSION!!**  
 Arduino library for using LDM8E LED display drivers. 
 
 ## Overview
