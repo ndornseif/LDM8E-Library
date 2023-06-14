@@ -19,7 +19,7 @@ The "BareMinimum" example showcases the simplest display setup.
 See LDM8EDriver.cpp and the "DisplayTest" example for more in-depth functionality.
 
 ## LDM8EDisplay class
-`LDM8EDisplay mydisplay(dimmingMode, numModules)`  
+### `LDM8EDisplay mydisplay(dimmingMode, numModules)`  
 The `dimmingMode` parameter defines the dimming mode.  
 - 0 = Chip Enable PWM (LDM2)  
 - 1 = Split ground PWM (LDM1)  
