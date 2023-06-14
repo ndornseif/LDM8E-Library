@@ -1,5 +1,5 @@
 /*
-  BareMinimus.ino
+  BareMinimum.ino
   LDM8EDriver library example code.
   This code displays 9999 on the LEDs.
   Created 2023-06-14 by N.Dornseif
