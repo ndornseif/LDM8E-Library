@@ -25,6 +25,7 @@ The `dimmingMode` parameter defines the dimming mode.
 - 1 = Split ground PWM (LDM1)  
 - 2 = Analog dimming (both)  
 See the main GitHub [repo](https://github.com/ndornseif/LDM8E-LEDDisplayController) for more information on dimming.  
+
 The `numModules` parameter defines the number of LDM modules connected.  
 
 ### `void begin()`  
