@@ -2,8 +2,7 @@
   DisplayTest.ino
   LDM8EDriver library example code.
   This program performs a simple display test.
-  !!UNFINISHED ALPHA VERSION!!
-  Created 23-06-04 by N.Dornseif
+  Created 2023-06-04 by N.Dornseif
   Writen for the LDM8E hardware only.
   More info on this library:
   https://github.com/ndornseif/LDM8E-Library
@@ -70,10 +69,10 @@ void displayTest(){
     Since every bit represents exactly one segment
     a one is shifted left to activate them individually
   */
-  unsigned long disp = 1;
+  unsigned long displayState = 1;
   for(byte i = 0; i < (numModules * 8); i++){
-    mydisplay.setDisplay(disp);
-    disp = disp << 1;
+    mydisplay.setDisplay(displayState);
+    displayState = displayState << 1;
     delay(400);
   }
 }

@@ -1,8 +1,7 @@
 /*
   LDM8EDriver.cpp
   LDM8EDriver - Arduino library for using LDM8E LED display drivers.
-  !!UNFINISHED ALPHA VERSION!!
-  Created 23-06-04 by N.Dornseif
+  Created 2023-06-04 by N.Dornseif
   Writen for the LDM8E hardware only.
   More info on this library:
   https://github.com/ndornseif/LDM8E-Library

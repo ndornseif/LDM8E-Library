@@ -1,8 +1,7 @@
 /*
   LDM8EDriver.h
   LDM8EDriver - Arduino library for using LDM8E LED display drivers.
-  !!UNFINISHED ALPHA VERSION!!
-  Created 23-06-04 by N.Dornseif
+  Created 2023-06-04 by N.Dornseif
   Writen for the LDM8E hardware only.
   More info on this library:
   https://github.com/ndornseif/LDM8E-Library
@@ -28,19 +27,19 @@ class LDM8EDisplay
       0=Chip Enable PWM (LDM2)
       1=Split ground PWM (LDM1)
       2=Analog dimming (Both)
-      See github for more info on dimming:
+      See GitHub for more info on dimming:
       https://github.com/ndornseif/LDM8E-LEDDisplayController
       Pin definitions: SerialCLK, RegisterCLK, DataOUT, RegisterCLR, OutputENA, ActyLED, BrightnessControl
     */
     LDM8EDisplay(uint8_t dimmingMode, uint8_t numModules, uint8_t pinSCK = 32, uint8_t pinRCK = 33, uint8_t pinSDA = 27, uint8_t pinRCL = 17, uint8_t pinREN = 16, uint8_t pinACT = 2, uint8_t pinBRC = 25);
     void begin();
-    void latchData();
-    void sendByte(uint8_t displayByte);
     void setDisplay(uint32_t displayData);
     void writeDisplay(uint16_t displayNumber);
     void setBrightness(uint8_t brightness);
     void clearDisplay();
   private:
+    void latchData();
+    void sendByte(uint8_t displayByte);
     uint8_t _dimmingMode;
     uint8_t _numModules;
     uint8_t _pinSCK;
