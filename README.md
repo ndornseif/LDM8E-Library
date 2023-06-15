@@ -53,7 +53,6 @@ Examples for a four-module display:
 `setDisplay(0x01010101)` turn on the decimal point on all displays.  
 `setDisplay(0x06060606)` turn on segments F and G on all displays.  
 ### `void clearDisplay()`  
-**Only works on LDM2 modules!**  
 Clears the display shift registers and turns off all segments.   
 
 ## Other  

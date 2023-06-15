@@ -162,7 +162,6 @@ void LDM8EDisplay::writeDisplay(uint16_t displayNumber){
 
 /*
   Clear all connected shift registers and output registers. 
-  NOTE: Only works with LDM2 modules.
 */
 void LDM8EDisplay::clearDisplay(){
   //Pulses the CLR pin to low since it is active low.
