@@ -17,6 +17,7 @@ setDisplay		KEYWORD2
 writeDisplay	KEYWORD2
 setBrightness	KEYWORD2
 clearDisplay	KEYWORD2
+setActyLED		KEYWORD2
 
 #######################################
 # Constants

@@ -37,6 +37,7 @@ class LDM8EDisplay
     void writeDisplay(uint16_t displayNumber);
     void setBrightness(uint8_t brightness);
     void clearDisplay();
+    void setActyLED(bool ledState);
   private:
     void latchData();
     void sendByte(uint8_t displayByte);

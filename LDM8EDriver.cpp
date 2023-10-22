@@ -162,10 +162,19 @@ void LDM8EDisplay::writeDisplay(uint16_t displayNumber){
 
 /*
   Clear all connected shift registers and output registers. 
+  NOTE: Only works with LDM2 modules.
 */
 void LDM8EDisplay::clearDisplay(){
   //Pulses the CLR pin to low since it is active low.
   digitalWrite(_pinRCL, LOW);
   delayMicroseconds(10);
   digitalWrite(_pinRCL, HIGH);
+}
+
+/*
+  Set the Activity LED to the specified state.
+*/
+void LDM8EDisplay::setActyLED(bool ledState){
+  //Pulses the CLR pin to low since it is active low.
+  digitalWrite(_pinACT, ledState);
 }
