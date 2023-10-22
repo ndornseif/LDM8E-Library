@@ -78,5 +78,8 @@ void displayTest(){
 }
 
 void loop() {
+  mydisplay.setActyLED(1);
+  delay(100)
+  mydisplay.setActyLED(0);
   displayTest();
 }
