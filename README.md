@@ -22,8 +22,8 @@ The "BareMinimum" example showcases the simplest display setup.
 See LDM8EDriver.cpp and the "DisplayTest" example for more in-depth functionality.
 
 ## LDM8EDisplay class
-`LDM8EDisplay mydisplay(dimmingMode, numModules)`
-The `dimmingMode` parameter defines the dimming mode.  
+`LDM8EDisplay mydisplay(dimmingMode, numModules)`  
+The `dimmingMode` parameter defines the way the modules are dimmed:    
 - 0 = Chip Enable PWM (LDM2)
 - 1 = Split ground PWM (LDM1)
 - 2 = Analog dimming (both)
@@ -32,7 +32,8 @@ The `numModules` parameter defines the number of LDM modules connected.
 
 ### void `begin()`
 Initializes the display and sets up all MCU pins.
-Initial state is all segments off and display at max brightness.
+Initial state is all segments off and display at max brightness.  
+
 ### void `writeDisplay(int number)`
 Takes in a number and writes its decimal representation to the display.  
 If the number is shorter than the display it will be padded with zeros.  
@@ -40,9 +41,11 @@ If it is longer, only the digits that fit will be displayed, starting from the e
 Examples for a four-module display:   
 "1234567" will be displayed as "4567".  
 "12" will be displayed as "0012".  
+
 ### void `setBrightness(byte brightness)`
 Sets the entire display to the specified brightness using the configured dimming mode.  
 255 is the maximum brightness, and 0 is barely visible.  
+
 ### void `setDisplay(long displayState)`
 Shifts the specified 32 bits out to the display.  
 Every byte corresponds to a display module, and each bit to a segment.  
@@ -54,6 +57,7 @@ Examples for a four-module display:
 `setDisplay(0x00000000)` turns all segments off.  
 `setDisplay(0x01010101)` turn on the decimal point on all displays.  
 `setDisplay(0x06060606)` turn on segments F and G on all displays.  
+
 ### void `clearDisplay()`
 **Only works on LDM2 modules!**  
 Clears the display shift registers and turns off all segments. 
