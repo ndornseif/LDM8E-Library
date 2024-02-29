@@ -34,7 +34,7 @@ class LDM8EDisplay
     LDM8EDisplay(uint8_t dimmingMode, uint8_t numModules, uint8_t pinSCK = 32, uint8_t pinRCK = 33, uint8_t pinSDA = 27, uint8_t pinRCL = 17, uint8_t pinREN = 16, uint8_t pinACT = 2, uint8_t pinBRC = 25);
     void begin();
     void setDisplay(uint32_t displayData);
-    void writeDisplay(uint16_t displayNumber);
+    void writeDisplay(uint16_t displayNumber, uint32_t orMask);
     void setBrightness(uint8_t brightness);
     void clearDisplay();
     void setActyLED(bool ledState);

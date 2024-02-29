@@ -32,13 +32,14 @@ The `numModules` parameter defines the number of LDM modules connected.
 Initializes the display and sets up all MCU pins.
 Initial state is all segments off and display at max brightness.  
 
-### void `writeDisplay(int number)`
+### void `writeDisplay(int number, long orMask)`
 Takes in a number and writes its decimal representation to the display.  
 If the number is shorter than the display it will be padded with zeros.  
 If it is longer, only the digits that fit will be displayed, starting from the end.  
 Examples for a four-module display:   
 "1234567" will be displayed as "4567".  
 "12" will be displayed as "0012".  
+Before the result is send out via setDisplay a bitwise or with the supplied orMask is performed.  
 
 ### void `setBrightness(byte brightness)`
 Sets the entire display to the specified brightness using the configured dimming mode.  
@@ -59,6 +60,10 @@ Examples for a four-module display:
 ### void `clearDisplay()`
 **Only works on LDM2 modules!**  
 Clears the display shift registers and turns off all segments. 
+
+### void `setActyLED(bool ledState)`
+Turn on or off the activity LED on the controller board.  
+
 
 ## Other
 Published under GPL-3.0 license.  

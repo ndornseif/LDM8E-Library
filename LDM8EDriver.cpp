@@ -146,7 +146,7 @@ void LDM8EDisplay::setBrightness(uint8_t brightness){
   123456  -> 3456
   12      -> 0012
 */
-void LDM8EDisplay::writeDisplay(uint16_t displayNumber){
+void LDM8EDisplay::writeDisplay(uint16_t displayNumber, uint32_t orMask){
   //Take in a number and convert it into a 32bit display configuraton
   //Each byte coresponds to one seven segment display
   uint32_t output = 0;
@@ -157,7 +157,7 @@ void LDM8EDisplay::writeDisplay(uint16_t displayNumber){
     uint32_t digitByte = LDM8E_DIGIT_BYTES[digit];
     output += digitByte << (i * 8);
   }
-  setDisplay(output);
+  setDisplay(output | orMask);
 }
 
 /*
